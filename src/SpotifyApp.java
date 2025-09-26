@@ -25,22 +25,20 @@ public class SpotifyApp {
             System.out.println("\n MENU: ");
             System.out.println("1. Tilføj sang");
             System.out.println("2. Fjern sang");
-            System.out.println("3. Find sang");
-            System.out.println("4. Vis alle sange");
-            System.out.println("5. Rediger sangtitel");
-            System.out.println("6. Download sang");
-            System.out.println("0. Afslut");
+            System.out.println("3. Vis alle sange");
+            System.out.println("4. Rediger sangtitel");
+            System.out.println("5. Download sang");
+            System.out.println("6. Afslut");
             System.out.print("Vælg: ");
             valg = Integer.parseInt(scanner.nextLine());
 
             switch (valg) {
                 case 1 -> tilfoejSang();
                 case 2 -> fjernSang();
-                case 3 -> findSang();
-                case 4 -> visAlleSange();
-                case 5 -> redigerTitel();
-                case 6 -> downloadSang();
-                case 0 -> System.out.println("Farvel, " + navn + "!");
+                case 3 -> visAlleSange();
+                case 4 -> redigerTitel();
+                case 5 -> downloadSang();
+                case 6 -> System.out.println("Farvel, " + navn + "!");
                 default -> System.out.println("Ugyldigt valg.");
             }
         } while (valg != 0);
@@ -64,18 +62,6 @@ public class SpotifyApp {
         String titel = scanner.nextLine();
         boolean fjernet = sangListe.removeIf(s -> s.getTitel().equalsIgnoreCase(titel));
         System.out.println(fjernet ? " Sang fjernet." : " Sang ikke fundet.");
-    }
-
-    private static void findSang() {
-        System.out.print("Titel på sang der skal findes: ");
-        String titel = scanner.nextLine();
-        for (Sang s : sangListe) {
-            if (s.getTitel().equalsIgnoreCase(titel)) {
-                System.out.println(" Fundet: " + s);
-                return;
-            }
-        }
-        System.out.println(" Ingen sang med den titel.");
     }
 
     private static void visAlleSange() {
