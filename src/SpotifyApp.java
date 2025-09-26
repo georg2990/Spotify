@@ -14,6 +14,7 @@ public class SpotifyApp {
         String svar = scanner.nextLine().toLowerCase();
         bruger = svar.equals("ja") ? new PremiumUser(navn) : new FreeUser(navn);
 
+        // Menu hvor brugeren kan vælge input
         int valg;
         do {
             bruger.showAdvertisment();
@@ -110,7 +111,7 @@ public class SpotifyApp {
             }
             System.out.println(" Sang ikke fundet.");
         } else {
-            System.out.println(" Kun Premium-brugere kan downloade.");
+            System.out.println(" Kun Premium-brugere kan downloade sange.");
         }
     }
 }
