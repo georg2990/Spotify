@@ -1,4 +1,6 @@
 //Superklasse User brugeren skriver sit navn
+
+//
 public abstract class User {
     protected String name;
 
@@ -6,7 +8,7 @@ public abstract class User {
     this.name=name;
     }
 
-    //Metoder til user som fortæller
+    //Metoder til user som fortæller om der er reklamer og om man kan downloade
     public abstract void showAdvertisment();
     public abstract boolean canDownload();
 }
