@@ -13,7 +13,7 @@ public class SpotifyApp {
         System.out.print("Indtast dit Username: ");
         String navn = scanner.nextLine();
 
-        // Spørger
+        // Spørger om brugeren er premium, og opretter en tilpassende bruger til svaret
         System.out.print("Er du Premium-bruger? (ja/nej): ");
         String svar = scanner.nextLine().toLowerCase();
         bruger = svar.equals("ja") ? new PremiumUser(navn) : new FreeUser(navn);
@@ -43,11 +43,12 @@ public class SpotifyApp {
             }
         } while (valg != 0);
     }
-    //
+    //add metode til at tilføje sang
     private static void tilfoejSang() {
         System.out.print("Titel: ");
         String titel = scanner.nextLine();
         System.out.print("Genre (ROCK, POP, JAZZ, REGGAE, CLASSICAL, HIPHOP, ELECTRONIC): ");
+
         try {
             Genre genre = Genre.valueOf(scanner.nextLine().toUpperCase());
             sangListe.add(new Sang(titel, genre));
