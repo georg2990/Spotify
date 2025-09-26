@@ -14,7 +14,7 @@ public class SpotifyApp {
         String svar = scanner.nextLine().toLowerCase();
         bruger = svar.equals("ja") ? new PremiumUser(navn) : new FreeUser(navn);
 
-        // Menu hvor brugeren kan vælge input
+        // Menu hvor brugeren kan vælge input do-while lykke
         int valg;
         do {
             bruger.showAdvertisment();
@@ -41,7 +41,7 @@ public class SpotifyApp {
             }
         } while (valg != 0);
     }
-
+    //
     private static void tilfoejSang() {
         System.out.print("Titel: ");
         String titel = scanner.nextLine();
