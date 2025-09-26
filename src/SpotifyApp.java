@@ -6,10 +6,14 @@ public class SpotifyApp {
     private static Scanner scanner = new Scanner(System.in);
     private static User bruger;
 
+    //Main metode
     public static void main(String[] args) {
-        System.out.print("Indtast dit navn: ");
+
+        // Spørgen om brugerens username
+        System.out.print("Indtast dit Username: ");
         String navn = scanner.nextLine();
 
+        // Spørger
         System.out.print("Er du Premium-bruger? (ja/nej): ");
         String svar = scanner.nextLine().toLowerCase();
         bruger = svar.equals("ja") ? new PremiumUser(navn) : new FreeUser(navn);
@@ -18,7 +22,7 @@ public class SpotifyApp {
         int valg;
         do {
             bruger.showAdvertisment();
-            System.out.println("\n MENU:");
+            System.out.println("\n MENU: ");
             System.out.println("1. Tilføj sang");
             System.out.println("2. Fjern sang");
             System.out.println("3. Find sang");
