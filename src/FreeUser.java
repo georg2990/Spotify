@@ -7,7 +7,7 @@ public class FreeUser extends User {
     //Viser reklamer hvis brugeren er FreeUser
     @Override
     public void showAdvertisment() {
-        System.out.println(" Opgrader til Spotify Premium for at slippe for reklamer! ");
+        System.out.println(" Opgrader til Spotify Premium for kun 79kr. om måneden, for at slippe for reklamer! ");
         }
 
         //Kan ikke downloade sange

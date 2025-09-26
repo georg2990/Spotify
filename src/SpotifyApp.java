@@ -68,7 +68,7 @@ public class SpotifyApp {
         if (sangListe.isEmpty()) {
             System.out.println(" Listen er tom.");
         } else {
-            System.out.println(" Alle sange:");
+            System.out.println(" Alle sange: ");
             for (Sang s : sangListe) {
                 System.out.println(s);
             }
